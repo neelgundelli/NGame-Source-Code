@@ -3,7 +3,7 @@ local ScriptService = require("src.ScriptStorage")
 local ReplicatedStorage = require("src.ReplicatedStorage")
 local context = require("src.context")
 local ClientInputService = require("src.ClientInputService")
-local 
+local Chat = require("src.Chat")
 
 -- Required Functions
 ReplicatedStorage.Replicate(nhgame.ReplicatedStorage.PlayerTag)
@@ -45,3 +45,8 @@ print(DataTypes[12])
 print(DataTypes[13])
 print(DataTypes[14])
 print(DataTypes[15])
+
+if ClientInputService.pressedkey('/')
+            nhgame.Players.ScreenGUIS.chat.Transparancy = 0
+            nhgame.Players.ScreenGUIS.chat.Clickable = true;
+end
